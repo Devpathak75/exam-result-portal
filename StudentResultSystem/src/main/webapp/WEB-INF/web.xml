@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- Send OTP Servlet -->
+    <servlet>
+        <servlet-name>SendOTPServlet</servlet-name>
+        <servlet-class>com.result.SendOTPServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SendOTPServlet</servlet-name>
+        <url-pattern>/SendOTPServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Verify OTP Servlet -->
+    <servlet>
+        <servlet-name>VerifyOTPServlet</servlet-name>
+        <servlet-class>com.result.VerifyOTPServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VerifyOTPServlet</servlet-name>
+        <url-pattern>/VerifyOTP</url-pattern>
+    </servlet-mapping>
+
+    <!-- Result Servlet -->
+    <servlet>
+        <servlet-name>ResultServlet</servlet-name>
+        <servlet-class>com.result.ResultServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResultServlet</servlet-name>
+        <url-pattern>/ResultServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>ResendOTP</servlet-name>
+    <servlet-class>com.result.ResendOTPServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ResendOTP</servlet-name>
+    <url-pattern>/ResendOTP</url-pattern>
+</servlet-mapping>
+    
+
+</web-app>
